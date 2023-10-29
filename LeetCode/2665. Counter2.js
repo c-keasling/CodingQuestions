@@ -29,7 +29,7 @@ var createCounter = function (init) {
     return (initialNum = init); // Reset to the initial value
   };
 
-  // Return an the correct number corresponding to the above functions created
+  // Return an object with  the above functions create
   return {
     increment,
     decrement,
