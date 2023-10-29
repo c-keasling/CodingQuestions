@@ -9,26 +9,34 @@
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
+// create createCounter function that accepts an initial number value
 var createCounter = function (init) {
+  // Initialize a counter with the initial value
   let initialNum = init;
+
+  // create increment function to increase the counter
   const increment = function () {
-    initialNum++;
-    return initialNum;
+    return ++initialNum; // add one and return the updated counter
   };
+
+  // create decrement function to decrease the counter
   const decrement = function () {
-    initialNum--;
-    return initialNum;
+    return --initialNum; // minus one and return the updated counter
   };
+
+  // create reset function to reset the counter to its initial value
   const reset = function () {
-    initialNum = init;
-    return initialNum;
+    return (initialNum = init); // Reset to the initial value
   };
+
+  // Return an the correct number corresponding to the above functions created
   return {
     increment,
     decrement,
     reset,
   };
 };
+
 
 /**
  * const counter = createCounter(5)
